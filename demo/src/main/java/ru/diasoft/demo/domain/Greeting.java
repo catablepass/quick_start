@@ -1,4 +1,4 @@
-package ru.diasoft.demo;
+package ru.diasoft.demo.domain;
 
 public class Greeting {
     private final long id;
