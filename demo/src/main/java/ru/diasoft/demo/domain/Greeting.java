@@ -1,8 +1,19 @@
 package ru.diasoft.demo.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Greeting {
+
+    @Id
+    @GeneratedValue
     private long id;
     private String content;
+
+    public Greeting() {
+    }
 
     public Greeting(long id, String content) {
         this.id = id;
@@ -24,5 +35,4 @@ public class Greeting {
     public void setContent(String content) {
         this.content = content;
     }
-
 }
