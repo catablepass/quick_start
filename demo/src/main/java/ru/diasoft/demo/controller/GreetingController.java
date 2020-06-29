@@ -31,15 +31,13 @@ public class GreetingController {
         return greetingService.add(greeting);
     }
 
-    @PutMapping
-    public Greeting update(@RequestBody Greeting greeting) {
-        return greetingService.update(greeting);
+    @PutMapping("{id}")
+    public Greeting update(@PathVariable long id, @RequestBody Greeting greeting) {
+        return greetingService.update(id, greeting);
     }
 
     @DeleteMapping({"{id}"})
     public void delete(@PathVariable long id) {
         greetingService.remove(id);
     }
-
-
 }

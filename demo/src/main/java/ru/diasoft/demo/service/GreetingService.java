@@ -12,7 +12,7 @@ public interface GreetingService {
 
     public Greeting add(Greeting greeting);
 
-    public Greeting update(Greeting greeting);
+    public Greeting update(long id, Greeting greeting);
 
     public void remove(long id);
 }

@@ -43,11 +43,12 @@ public class GreetingServiceImpl implements GreetingService {
         }
     };
 
-    public Greeting update(Greeting greeting) {
+    public Greeting update(long id, Greeting greeting) {
 
-        Optional<Greeting> exists = greetingRepo.findById(greeting.getId());
+        Optional<Greeting> exists = greetingRepo.findById(id);
 
         if (exists.isPresent()) {
+            greeting.setId(id);
             return greetingRepo.save(greeting);
         } else {
             throw new GreetingNotFoundException();
