@@ -6,7 +6,6 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "greeting")
-@AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
@@ -19,4 +18,8 @@ public class Greeting implements Serializable {
 
     @Column(name = "content")
     private String content;
+
+    public Greeting(String content) {
+        this.content = content;
+    }
 }
