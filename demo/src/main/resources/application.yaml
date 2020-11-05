@@ -1,0 +1,9 @@
+spring:
+  kafka:
+    bootstrap-servers: http://fmfaqsr.diasoft.ru:9092
+  cloud:
+    stream:
+      bindings:
+        directed:
+          destination: demo
+          group: ${spring.application.name}
