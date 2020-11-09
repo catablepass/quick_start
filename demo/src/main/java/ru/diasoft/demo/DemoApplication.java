@@ -2,8 +2,9 @@ package ru.diasoft.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.stream.annotation.EnableBinding;
+import ru.diasoft.demo.event.ConsumerChannels;
 
-@EnableDiscoveryClient
 @SpringBootApplication
 @EnableBinding(ConsumerChannels.class)
 public class DemoApplication {
