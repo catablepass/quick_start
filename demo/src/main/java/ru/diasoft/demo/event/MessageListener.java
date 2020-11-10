@@ -13,6 +13,6 @@ public class MessageListener {
 
     @StreamListener(ConsumerChannels.DIRECTED)
     public void demo(GreetingMessage message) {
-        logger.debug("Directed: " + message);
+        logger.info("Directed: " + message);
     }
 }
